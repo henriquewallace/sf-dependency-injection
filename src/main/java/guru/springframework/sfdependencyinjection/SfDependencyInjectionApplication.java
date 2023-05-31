@@ -1,9 +1,6 @@
 package guru.springframework.sfdependencyinjection;
 
-import guru.springframework.sfdependencyinjection.controllers.ConstructorInjectedController;
-import guru.springframework.sfdependencyinjection.controllers.MyController;
-import guru.springframework.sfdependencyinjection.controllers.PropertyInjectedController;
-import guru.springframework.sfdependencyinjection.controllers.SetterInjectedController;
+import guru.springframework.sfdependencyinjection.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +10,9 @@ public class SfDependencyInjectionApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SfDependencyInjectionApplication.class, args);
+
+        I18nController i18nController = (I18nController) context.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
         MyController myController = (MyController) context.getBean("myController");
 
