@@ -1,7 +1,9 @@
 package guru.springframework.sfdependencyinjection.controllers;
 
 import guru.springframework.sfdependencyinjection.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
