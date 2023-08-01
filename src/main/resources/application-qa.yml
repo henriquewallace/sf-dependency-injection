@@ -1,0 +1,4 @@
+guru:
+  username: YMLQaDbUser
+  password: YMLQaPassword
+  jdbcUrl: YMLUrlForQaDB
